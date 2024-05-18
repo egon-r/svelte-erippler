@@ -27,6 +27,38 @@
 
 <div>
     <h1>ERippler Demo</h1>
+    <div style="display: flex; flex-direction: row; justify-content: center; font-size: 2em;">
+        <a
+            href="https://github.com/egon-r/svelte-erippler"
+            style="position: relative; padding: 12px 20px;"
+            on:click={(e) => {
+                handleOnClick(e, 9);
+            }}
+            on:pointerdown={(e) => {
+                handleOnPointerDown(e, 9);
+            }}
+        >
+            <ERippler bind:this={ripplers[9]} rippleOverflow={"visible"} rippleDurationMs={600} rippleColor={"#aaa"} />
+            <span style="position: relative;">
+                Github
+            </span>
+        </a>
+        <a
+            href="https://www.npmjs.com/package/@egonr/svelte-erippler"
+            style="position: relative; padding: 12px 20px;"
+            on:click={(e) => {
+                handleOnClick(e, 8);
+            }}
+            on:pointerdown={(e) => {
+                handleOnPointerDown(e, 8);
+            }}
+        >
+            <ERippler bind:this={ripplers[8]} rippleOverflow={"visible"} rippleDurationMs={600} rippleColor={"red"} />
+            <span style="position: relative;">
+                NPM
+            </span>
+        </a>
+    </div>
     <section>
         <h2>Default Ripple</h2>
         <button
