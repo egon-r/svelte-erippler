@@ -1,9 +1,11 @@
 # Svelte ERippler
-A simple but versatile svelte component to create ripple effects.
 
-[![ripple demo](ripple-demo.gif)](https://egon-r.github.io/svelte-erippler/)
+[![ripple demo](https://raw.githubusercontent.com/egon-r/svelte-erippler/master/ripple-demo.gif)](https://egon-r.github.io/svelte-erippler/)
 
-[Demo Page](https://egon-r.github.io/svelte-erippler/)
+- Smooth CSS Animations
+- Single file/zero dependencies
+- [Demo Page](https://egon-r.github.io/svelte-erippler/)
+
 
 ## Install
 
@@ -33,6 +35,3 @@ Since everything is contained in a single file you could also just copy `src/lib
 ```
 
 For more examples see the demo page source code at `src/routes/+page.svelte`.
-
-> [!NOTE]
-> This project is mainly for personal usage so please don't submit any pull/feature requests and create a fork instead.
