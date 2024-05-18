@@ -3,6 +3,7 @@
 [![ripple demo](https://raw.githubusercontent.com/egon-r/svelte-erippler/master/ripple-demo.gif)](https://egon-r.github.io/svelte-erippler/)
 
 - Smooth CSS Animations
+- Custom/Multiple Ripples
 - Single file/zero dependencies
 - [Demo Page](https://egon-r.github.io/svelte-erippler/)
 
