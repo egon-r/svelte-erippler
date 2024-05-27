@@ -37,17 +37,30 @@
 <script lang="ts">
     export const name = "ERippler";
 
-    export let color: "primary" | "secondary" = "primary";
-    export let disabled = false;
-    export let rippleColor = "blue";
-    export let rippleCustom =
-        "radial-gradient(transparent 5%, var(--rippleColor) 50%, transparent 90%)";
-    export let rippleDurationMs = 600;
-    export let rippleSizeMod = 2.0;
-    export let rippleAbsoluteSize: number | undefined = undefined;
-    export let rippleZIndex: number | "auto" = "auto";
-    export let rippleOverflow: "hidden" | "visible" = "hidden"; 
-    export let maxRipples = 10;
+    type Props = {
+        disabled?: boolean,
+        rippleColor?: string,
+        rippleCustom?: string,
+        rippleDurationMs?: number,
+        rippleSizeMod?: number,
+        rippleAbsoluteSize?: number,
+        rippleZIndex?: number | "auto",
+        rippleOverflow?: "hidden" | "visible",
+        maxRipples?: number
+    }
+
+    let {
+        disabled = false,
+        rippleColor = "blue",
+        rippleCustom = "radial-gradient(transparent 5%, var(--rippleColor) 50%, transparent 90%)",
+        rippleDurationMs = 600,
+        rippleSizeMod = 2.0,
+        rippleAbsoluteSize,
+        rippleZIndex = "auto",
+        rippleOverflow = "hidden",
+        maxRipples = 10, 
+    }: Props = $props()
+
     let thisRoot: HTMLElement;
     let rippleClearTimeout: number | undefined;
     let activeRipples: HTMLElement[] = [];
@@ -100,7 +113,6 @@
 </script>
 
 <div
-    {color}
     style="--rippleDuration: {rippleDurationMs}ms; --rippleColor: {rippleColor}; --rippleCustom: {rippleCustom}; --rippleZIndex: {rippleZIndex}; --rippleOverflow: {rippleOverflow}"
     bind:this={thisRoot}
     disabled={disabled || undefined}

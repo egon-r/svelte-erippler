@@ -31,10 +31,10 @@
         <a
             href="https://github.com/egon-r/svelte-erippler"
             style="position: relative; padding: 12px 20px;"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 9);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 9);
             }}
         >
@@ -46,10 +46,10 @@
         <a
             href="https://www.npmjs.com/package/@egonr/svelte-erippler"
             style="position: relative; padding: 12px 20px;"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 8);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 8);
             }}
         >
@@ -63,10 +63,10 @@
         <h2>Default Ripple</h2>
         <button
             class="demo-button"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 0);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 0);
             }}
         >
@@ -80,15 +80,15 @@
         <h2>Ripple with Background</h2>
         <button
             class="demo-button"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 1);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 1);
             }}
         >
             <ERippler bind:this={ripplers[1]} rippleDurationMs={1000} rippleZIndex={1} />
-            <div style="background: darkblue; position: absolute; inset: 0;" />
+            <div style="background: darkblue; position: absolute; inset: 0;" ></div>
             <span style="position: relative; z-index: 2;">
                 Button
             </span>
@@ -98,10 +98,10 @@
         <h2>Ripple above Text</h2>
         <button
             class="demo-button"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 2);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 2);
             }}
         >
@@ -119,10 +119,10 @@
         <h2>Custom Color</h2>
         <button
             class="demo-button"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 3);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 3);
             }}
         >
@@ -140,10 +140,10 @@
         <h2>Custom Ripples</h2>
         <button
             class="demo-button"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 4);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 4);
             }}
         >
@@ -162,10 +162,10 @@
         <h2>Overflowing Ripple</h2>
         <button
             class="demo-button demo-button-overflow-visible"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 5);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 5);
             }}
         >
@@ -183,10 +183,10 @@
         <h2>Max Ripples = 2</h2>
         <button
             class="demo-button"
-            on:click={(e) => {
+            onclick={(e) => {
                 handleOnClick(e, 6);
             }}
-            on:pointerdown={(e) => {
+            onpointerdown={(e) => {
                 handleOnPointerDown(e, 6);
             }}
         >
