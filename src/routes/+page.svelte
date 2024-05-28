@@ -200,6 +200,28 @@
             </span>
         </button>
     </section>
+    <section>
+        <h2>On Ripple Finish</h2>
+        <button
+            class="demo-button"
+            onclick={(e) => {
+                handleOnClick(e, 7);
+            }}
+            onpointerdown={(e) => {
+                handleOnPointerDown(e, 7);
+            }}
+        >
+            <ERippler
+                bind:this={ripplers[7]}
+                rippleDurationMs={600}
+                onRippleFinish={() => alert("ripple finished!")}
+                maxRipples={1}
+            />
+            <span style="position: relative;">
+                Button
+            </span>
+        </button>
+    </section>
 </div>
 
 <style>
