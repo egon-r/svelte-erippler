@@ -40,6 +40,7 @@
     type Props = {
         disabled?: boolean,
         rippleColor?: string,
+        onRippleFinish?: () => void,
         rippleCustom?: string,
         rippleDurationMs?: number,
         rippleSizeMod?: number,
@@ -59,6 +60,7 @@
         rippleZIndex = "auto",
         rippleOverflow = "hidden",
         maxRipples = 10, 
+        onRippleFinish,
     }: Props = $props()
 
     let thisRoot: HTMLElement;
@@ -103,6 +105,9 @@
         rippleClearTimeout = setTimeout(() => {
             while (activeRipples.length > 0) {
                 activeRipples.pop()?.remove();
+                if(onRippleFinish) {
+                    onRippleFinish()
+                }
             }
         }, rippleDurationMs);
     }
