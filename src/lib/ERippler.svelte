@@ -38,6 +38,7 @@
     export const name = "ERippler";
 
     type Props = {
+        children?: Snippet,
         disabled?: boolean,
         rippleColor?: string,
         onRippleFinish?: () => void,
@@ -51,6 +52,7 @@
     }
 
     let {
+        children,
         disabled = false,
         rippleColor = "blue",
         rippleCustom = "radial-gradient(transparent 5%, var(--rippleColor) 50%, transparent 90%)",
@@ -122,7 +124,9 @@
     bind:this={thisRoot}
     disabled={disabled || undefined}
 >
-    <slot />
+    {#if children}
+        {@render children()}
+    {/if}
 </div>
 
 <style>
